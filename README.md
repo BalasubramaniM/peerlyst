@@ -9,18 +9,14 @@ Peerlyst Challenge. This application was built using [create-react-app](https://
 - [Node.js & NPM](https://www.npmjs.com/package/download)
 - [gh-pages](https://www.npmjs.com/package/gh-pages)
 - [history](https://www.npmjs.com/package/history)
-- [nprogress](https://www.npmjs.com/package/nprogress)
 - [react](https://www.npmjs.com/package/react)
 - [react-dom](https://www.npmjs.com/package/react-dom)
 - [react-redux](https://www.npmjs.com/package/react-redux)
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [react-router-redux](https://www.npmjs.com/package/react-router-redux)
 - [react-scripts](https://www.npmjs.com/package/react-scripts)
-- [react-select](https://www.npmjs.com/package/react-select)
 - [redux](https://www.npmjs.com/package/redux)
 - [redux-logger](https://www.npmjs.com/package/redux-logger)
-- [superagent](https://www.npmjs.com/package/superagent)
-- [superagent-promise](https://www.npmjs.com/package/superagent-promise)
 
 ### Installing
 
@@ -40,8 +36,6 @@ Finally,
 ```
 npm start
 ```
-
-(Enable CORS if you face any issue with Access-Control-Allow-Origin)
 
 ## Getting Started
 
