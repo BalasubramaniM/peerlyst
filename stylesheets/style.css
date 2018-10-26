@@ -7,7 +7,8 @@
 Variable declarations
  */
 :root {
-	--main-bg-color: #e0ebe8;
+	--main-bg-color: #008080;
+	--secondary-bg-color: #ddeae8;
 	--main-text-color: #4a4a4a;
 	--secondary-text-color: #505050;
 }
@@ -18,6 +19,8 @@ body {
 	font-size: 1rem;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 a {
@@ -25,9 +28,11 @@ a {
 }
 
 nav {
-	background-color: #fff;
+	background-color: var(--main-bg-color);
 	width: 100%;
 	box-shadow: 0 2px 0 0 #f5f5f5;
+	position: fixed;
+	z-index: 1;
 }
 
 nav p {
@@ -36,11 +41,11 @@ nav p {
 	width: 1344px;
 	margin: 0 auto;
 	font-size: 1.5rem;
-	color: var(--main-text-color);
+	color: #fff;
 }
 
 section {
-	padding: 3rem 1.5rem;
+	padding: 8rem 1.5rem 3rem;
 }
 
 .container {
@@ -50,23 +55,28 @@ section {
 
 .container .select-boxes {
 	display: flex;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 1.5rem;
 }
 
 .container .select-boxes div {
 	flex: 1;
 }
 
-.container .select-boxes .inputbox {
-	margin-bottom: 24px;
-}
-
 select {
 	min-height: 38px;
-	border-color: rgb(204, 204, 204);
 	max-width: 292px;
 	width: 100%;
-	font-size: 18px;
+	font-size: 1rem;
 	margin-top: 12px;
+	padding: 12px 20px 12px 12px;
+	-webkit-appearance: none;
+	border: 1px solid #ddd;
+	background-color: var(--secondary-bg-color);
+	color: var(--main-text-color);
+	outline: none;
+	box-sizing: border-box;
 }
 
 .myInput {
@@ -74,12 +84,15 @@ select {
 	background-position: 10px 12px;
 	background-repeat: no-repeat;
 	width: 100%;
-	font-size: 16px;
+	font-size: 1rem;
 	padding: 12px 20px 12px 40px;
 	border: 1px solid #ddd;
-	margin-top: 24px;
+	margin-top: 12px;
 	max-width: 292px;
 	border-radius: 4px;
+	background-color: var(--secondary-bg-color);
+	outline: none;
+	box-sizing: border-box;
 }
 
 .myInput.search {
@@ -91,12 +104,12 @@ select {
 	font-size: 1.3rem;
 }
 
-.feed-section {
-	margin-top: 24px;
+.feed-section .title {
+	margin: 0 12px;
 }
 
 .feeds {
-	margin-top: 24px;
+	margin-top: 1.5rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -166,6 +179,58 @@ select {
 	color: #828282;
 }
 
+.table-div {
+	margin: 12px;
+	overflow-x: scroll;
+}
+
+.table-container {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.table-container td,
+.table-container th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.table-container tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+/*.table-container tr:hover {
+	background-color: #ddd;
+}*/
+
+.table-container th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: var(--main-bg-color);
+	color: white;
+}
+
+.table-container .table-name {
+	min-width: 200px;
+}
+
+.table-container .table-date {
+	min-width: 100px;
+}
+
+.table-container .table-image {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+}
+
+.table-container .table-image img {
+	width: 100%;
+	height: 100%;
+}
+
 /*********************************Media Queries*********************************/
 
 /* 
@@ -173,11 +238,14 @@ select {
   ##Screen = 1472px and above.
 */
 
-@media (min-width: 1472px) {
+@media (min-width: 1357px) {
 	/* For desktop: */
 	.container {
 		max-width: 1344px;
 		width: 1344px;
+	}
+	.container .select-boxes div:last-child {
+		text-align: right;
 	}
 }
 
@@ -189,9 +257,13 @@ select {
 @media (min-width: 768px) and (max-width: 1356px) {
 	.feeds .feed {
 		flex: 0 0 45%;
+		height: 450px;
 	}
-	.container .select-boxes {
-		flex-direction: column;
+	.container .select-boxes div {
+		margin: 12px;
+	}
+	.container .select-boxes div:last-child {
+		text-align: right;
 	}
 }
 
@@ -207,6 +279,26 @@ select {
 	.container .select-boxes {
 		flex-direction: column;
 	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 1.5rem;
+	}
+	.container .select-boxes div:last-child {
+		text-align: left;
+	}
+	.myInput,
+	select {
+		max-width: 100%;
+	}
+
+	.table-container .table-name {
+		min-width: 100px;
+	}
+
+	.table-container .table-image {
+		width: 100px;
+		height: 100px;
+		box-sizing: border-box;
+	}
 }
 
 /* 
@@ -221,5 +313,24 @@ select {
 	}
 	.container .select-boxes {
 		flex-direction: column;
+	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 1.5rem;
+	}
+	.container .select-boxes div:last-child {
+		text-align: left;
+	}
+	.myInput,
+	select {
+		max-width: 100%;
+	}
+	.table-container .table-name {
+		min-width: 100px;
+	}
+
+	.table-container .table-image {
+		width: 100px;
+		height: 100px;
+		box-sizing: border-box;
 	}
 }
