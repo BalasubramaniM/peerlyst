@@ -54,6 +54,8 @@ class App extends React.Component {
     render() {
         let arrayData = jsonData;
 
+        let tableData = jsonData.slice(0, 5);
+
         if (this.props.search) {
             let searchRegex = new RegExp(this.props.search.toLowerCase());
 
@@ -145,24 +147,41 @@ class App extends React.Component {
                                 ))}
                             </div>
                         </div>
-                        <p className="subtitle">Table</p>
-                        <table className="table-container">
-                            <tr>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
-                            </tr>
-                            <tr>
-                                <td>Alfreds Futterkiste</td>
-                                <td>Maria Anders</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <td>Berglunds snabbköp</td>
-                                <td>Christina Berglund</td>
-                                <td>Sweden</td>
-                            </tr>
-                        </table>
+                        <div className="table-div">
+                            <table className="table-container">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Image</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {tableData.map(val => (
+                                        <React.Fragment key={val.name}>
+                                            <tr>
+                                                <td className="table-name">
+                                                    {val.name}
+                                                </td>
+                                                <td>
+                                                    <div className="table-image">
+                                                        <img
+                                                            src={val.image}
+                                                            alt={val.name}
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>{val.description}</td>
+                                                <td className="table-date">
+                                                    {this.formatDate(val.date)}
+                                                </td>
+                                            </tr>
+                                        </React.Fragment>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
             </div>
