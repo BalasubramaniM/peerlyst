@@ -1,0 +1,225 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+Variable declarations
+ */
+:root {
+	--main-bg-color: #e0ebe8;
+	--main-text-color: #4a4a4a;
+	--secondary-text-color: #505050;
+}
+
+html,
+body {
+	background-color: #fff;
+	font-size: 1rem;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	background-color: #fff;
+	width: 100%;
+	box-shadow: 0 2px 0 0 #f5f5f5;
+}
+
+nav p {
+	padding: 2rem 2rem;
+	max-width: 1344px;
+	width: 1344px;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	color: var(--main-text-color);
+}
+
+section {
+	padding: 3rem 1.5rem;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+}
+
+.container .select-boxes {
+	display: flex;
+}
+
+.container .select-boxes div {
+	flex: 1;
+}
+
+.container .select-boxes .inputbox {
+	margin-bottom: 24px;
+}
+
+select {
+	min-height: 38px;
+	border-color: rgb(204, 204, 204);
+	max-width: 292px;
+	width: 100%;
+	font-size: 18px;
+	margin-top: 12px;
+}
+
+.myInput {
+	background-size: 18px 18px;
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-top: 24px;
+	max-width: 292px;
+	border-radius: 4px;
+}
+
+.myInput.search {
+	background-image: url("./search.svg");
+}
+
+.subtitle {
+	color: var(--main-text-color);
+	font-size: 1.3rem;
+}
+
+.feed-section {
+	margin-top: 24px;
+}
+
+.feeds {
+	margin-top: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.feeds::after {
+	content: "";
+	flex: auto;
+}
+
+.feeds .feed {
+	flex: 0 0 31.5%;
+	margin: 12px;
+	height: 430px;
+	min-width: 0;
+}
+
+.feeds .feed:last-child {
+	margin-right: 0px;
+}
+
+.card {
+	background-color: #fff;
+	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+	color: var(--main-text-color);
+	max-width: 100%;
+	position: relative;
+}
+
+.card-image {
+	display: block;
+	position: relative;
+	height: 285px;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+}
+
+.card-content {
+	background-color: transparent;
+	padding: 1.5rem;
+}
+
+.card .card-content .name {
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+
+.card .card-content .desc {
+	font-size: 14px;
+	margin-bottom: 12px;
+	color: var(--secondary-text-color);
+	height: 32px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-height: 1.2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.card .card-content .date {
+	font-size: 12px;
+	color: #828282;
+}
+
+/*********************************Media Queries*********************************/
+
+/* 
+  ##Device = iMac etc.,
+  ##Screen = 1472px and above.
+*/
+
+@media (min-width: 1472px) {
+	/* For desktop: */
+	.container {
+		max-width: 1344px;
+		width: 1344px;
+	}
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1356px) {
+	.feeds .feed {
+		flex: 0 0 45%;
+	}
+	.container .select-boxes {
+		flex-direction: column;
+	}
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.feeds .feed {
+		flex: 0 0 97%;
+	}
+	.container .select-boxes {
+		flex-direction: column;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.feeds .feed {
+		flex: 0 0 93%;
+		height: 460px;
+	}
+	.container .select-boxes {
+		flex-direction: column;
+	}
+}
