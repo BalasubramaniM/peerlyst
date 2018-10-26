@@ -83,7 +83,7 @@ select {
 }
 
 .myInput.search {
-	background-image: url("./search.svg");
+	background-image: url("../icons/search.svg");
 }
 
 .subtitle {

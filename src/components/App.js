@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import jsonData from "../data/mock_data.json";
-
-import "../styles/style.css";
 import { SEARCH, SORTBY, APP_LOAD } from "../constants/actionTypes";
 
 const mapStateToProps = state => ({
