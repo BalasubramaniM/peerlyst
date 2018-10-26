@@ -7,7 +7,8 @@
 Variable declarations
  */
 :root {
-	--main-bg-color: #e0ebe8;
+	--main-bg-color: #008080;
+	--secondary-bg-color: #ddeae8;
 	--main-text-color: #4a4a4a;
 	--secondary-text-color: #505050;
 }
@@ -25,7 +26,7 @@ a {
 }
 
 nav {
-	background-color: #fff;
+	background-color: var(--main-bg-color);
 	width: 100%;
 	box-shadow: 0 2px 0 0 #f5f5f5;
 }
@@ -36,7 +37,7 @@ nav p {
 	width: 1344px;
 	margin: 0 auto;
 	font-size: 1.5rem;
-	color: var(--main-text-color);
+	color: #fff;
 }
 
 section {
@@ -50,23 +51,27 @@ section {
 
 .container .select-boxes {
 	display: flex;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 24px;
 }
 
 .container .select-boxes div {
 	flex: 1;
 }
 
-.container .select-boxes .inputbox {
-	margin-bottom: 24px;
-}
-
 select {
 	min-height: 38px;
-	border-color: rgb(204, 204, 204);
 	max-width: 292px;
 	width: 100%;
 	font-size: 18px;
 	margin-top: 12px;
+	padding: 2px 10px;
+	-webkit-appearance: none;
+	border: 1px solid #ddd;
+	background-color: var(--secondary-bg-color);
+	color: var(--main-text-color);
+	outline: none;
 }
 
 .myInput {
@@ -77,9 +82,11 @@ select {
 	font-size: 16px;
 	padding: 12px 20px 12px 40px;
 	border: 1px solid #ddd;
-	margin-top: 24px;
+	margin-top: 12px;
 	max-width: 292px;
 	border-radius: 4px;
+	background-color: var(--secondary-bg-color);
+	outline: none;
 }
 
 .myInput.search {
@@ -93,6 +100,10 @@ select {
 
 .feed-section {
 	margin-top: 24px;
+}
+
+.feed-section .title {
+	margin: 0 12px;
 }
 
 .feeds {
@@ -166,6 +177,34 @@ select {
 	color: #828282;
 }
 
+.table-container {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 24px;
+}
+
+.table-container td,
+.table-container th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.table-container tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+	background-color: #ddd;
+}
+
+.table-container th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: var(--main-bg-color);
+	color: white;
+}
+
 /*********************************Media Queries*********************************/
 
 /* 
@@ -190,9 +229,9 @@ select {
 	.feeds .feed {
 		flex: 0 0 45%;
 	}
-	.container .select-boxes {
-		flex-direction: column;
-	}
+	/*.container .select-boxes:first-child {
+		margin-bottom: 24px;
+	}*/
 }
 
 /* 
@@ -206,6 +245,9 @@ select {
 	}
 	.container .select-boxes {
 		flex-direction: column;
+	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 24px;
 	}
 }
 
@@ -221,5 +263,8 @@ select {
 	}
 	.container .select-boxes {
 		flex-direction: column;
+	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 24px;
 	}
 }

@@ -91,7 +91,7 @@ class App extends React.Component {
                 <section>
                     <div className="container">
                         <div className="select-boxes">
-                            <div className="inputbox">
+                            <div>
                                 <p className="subtitle">
                                     Search by title and description.
                                 </p>
@@ -118,7 +118,7 @@ class App extends React.Component {
                             </div>
                         </div>
                         <div className="feed-section">
-                            <p className="subtitle">Feeds</p>
+                            <p className="subtitle title">Feeds</p>
                             <div className="feeds">
                                 {arrayData.map(val => (
                                     <React.Fragment key={val.name}>
@@ -145,6 +145,24 @@ class App extends React.Component {
                                 ))}
                             </div>
                         </div>
+                        <p className="subtitle">Table</p>
+                        <table className="table-container">
+                            <tr>
+                                <th>Company</th>
+                                <th>Contact</th>
+                                <th>Country</th>
+                            </tr>
+                            <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                            </tr>
+                            <tr>
+                                <td>Berglunds snabbköp</td>
+                                <td>Christina Berglund</td>
+                                <td>Sweden</td>
+                            </tr>
+                        </table>
                     </div>
                 </section>
             </div>
