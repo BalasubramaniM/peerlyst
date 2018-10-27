@@ -17,6 +17,13 @@ Peerlyst Challenge. This application was built using [create-react-app](https://
 - [redux](https://www.npmjs.com/package/redux)
 - [redux-logger](https://www.npmjs.com/package/redux-logger)
 
+#### Dev Dependencies
+
+- [enzyme](https://www.npmjs.com/package/enzyme)
+- [enzyme-adapter-react-16](https://www.npmjs.com/package/enzyme-adapter-react-16)
+- [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json)
+- [react-test-renderer](https://www.npmjs.com/package/react-test-renderer)
+
 ### Installing
 
 ```
@@ -34,6 +41,14 @@ Finally,
 
 ```
 npm start
+```
+
+### Testing
+
+Run the following command in the root directory to test Peerlyst app.
+
+```
+npm test
 ```
 
 ## Getting Started
