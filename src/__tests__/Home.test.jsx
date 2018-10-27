@@ -32,4 +32,55 @@ describe("Home", () => {
 		const numberOfTableRows = wrapper.dive().find("tr").length;
 		expect(numberOfTableRows).toEqual(6);
 	});
+
+	it("Should sort by title", () => {
+		const wrapper = shallow(<Home list={jsonData} store={store} />);
+
+		wrapper
+			.dive()
+			.find("select")
+			.at(0)
+			.simulate("change", { target: { value: "title" } });
+
+		expect(
+			wrapper
+				.dive()
+				.find("select")
+				.prop("value")
+		).toEqual("title");
+	});
+
+	it("Should sort by date", () => {
+		const wrapper = shallow(<Home list={jsonData} store={store} />);
+
+		wrapper
+			.dive()
+			.find("select")
+			.at(0)
+			.simulate("change", { target: { value: "date" } });
+
+		expect(
+			wrapper
+				.dive()
+				.find("select")
+				.prop("value")
+		).toEqual("date");
+	});
+
+	it("Should search by keywords", () => {
+		const wrapper = shallow(<Home list={jsonData} store={store} />);
+
+		wrapper
+			.dive()
+			.find("input")
+			.at(0)
+			.simulate("change", { target: { value: "Chief" } });
+
+		expect(
+			wrapper
+				.dive()
+				.find("input")
+				.prop("value")
+		).toEqual("Chief");
+	});
 });
