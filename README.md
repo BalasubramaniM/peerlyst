@@ -55,6 +55,10 @@ npm test
 
 Open [localhost:3000](http://localhost:3000) file in your browser and see how Peerlyst app works.
 
+## Demo
+
+Preview of the application can be found at [balsu.me/peerlyst](http://balsu.me/peerlyst).
+
 ## Authors
 
 - **Balasubramani M** - _Initial work_ - [Balasubramani M](https://github.com/balasubramanim)
