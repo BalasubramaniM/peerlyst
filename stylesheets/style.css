@@ -79,7 +79,7 @@ select {
 	box-sizing: border-box;
 }
 
-.myInput {
+.input {
 	background-size: 18px 18px;
 	background-position: 10px 12px;
 	background-repeat: no-repeat;
@@ -95,7 +95,7 @@ select {
 	box-sizing: border-box;
 }
 
-.myInput.search {
+.input.search {
 	background-image: url("../icons/search.svg");
 }
 
@@ -256,11 +256,8 @@ select {
 
 @media (min-width: 768px) and (max-width: 1356px) {
 	.feeds .feed {
-		flex: 0 0 45%;
+		flex: 1 0 45%;
 		height: 450px;
-	}
-	.container .select-boxes div {
-		margin: 12px;
 	}
 	.container .select-boxes div:last-child {
 		text-align: right;
@@ -274,7 +271,7 @@ select {
 
 @media (min-width: 481px) and (max-width: 767px) {
 	.feeds .feed {
-		flex: 0 0 97%;
+		flex: 1 0 97%;
 	}
 	.container .select-boxes {
 		flex-direction: column;
@@ -285,7 +282,7 @@ select {
 	.container .select-boxes div:last-child {
 		text-align: left;
 	}
-	.myInput,
+	.input,
 	select {
 		max-width: 100%;
 	}
@@ -308,7 +305,7 @@ select {
 
 @media (min-width: 320px) and (max-width: 480px) {
 	.feeds .feed {
-		flex: 0 0 93%;
+		flex: 1 0 93%;
 		height: 460px;
 	}
 	.container .select-boxes {
@@ -320,7 +317,7 @@ select {
 	.container .select-boxes div:last-child {
 		text-align: left;
 	}
-	.myInput,
+	.input,
 	select {
 		max-width: 100%;
 	}
