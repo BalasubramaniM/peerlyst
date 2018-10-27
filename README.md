@@ -7,7 +7,6 @@ Peerlyst Challenge. This application was built using [create-react-app](https://
 #### Dependencies
 
 - [Node.js & NPM](https://www.npmjs.com/package/download)
-- [gh-pages](https://www.npmjs.com/package/gh-pages)
 - [history](https://www.npmjs.com/package/history)
 - [react](https://www.npmjs.com/package/react)
 - [react-dom](https://www.npmjs.com/package/react-dom)
@@ -40,10 +39,6 @@ npm start
 ## Getting Started
 
 Open [localhost:3000](http://localhost:3000) file in your browser and see how Peerlyst app works.
-
-## Demo
-
-Preview of the application can be found at [balsu.me/peerlyst](https://balsu.me/peerlyst).
 
 ## Authors
 

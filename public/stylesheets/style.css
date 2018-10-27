@@ -79,7 +79,7 @@ select {
 	box-sizing: border-box;
 }
 
-.myInput {
+.input {
 	background-size: 18px 18px;
 	background-position: 10px 12px;
 	background-repeat: no-repeat;
@@ -95,7 +95,7 @@ select {
 	box-sizing: border-box;
 }
 
-.myInput.search {
+.input.search {
 	background-image: url("../icons/search.svg");
 }
 
@@ -282,7 +282,7 @@ select {
 	.container .select-boxes div:last-child {
 		text-align: left;
 	}
-	.myInput,
+	.input,
 	select {
 		max-width: 100%;
 	}
@@ -317,7 +317,7 @@ select {
 	.container .select-boxes div:last-child {
 		text-align: left;
 	}
-	.myInput,
+	.input,
 	select {
 		max-width: 100%;
 	}
