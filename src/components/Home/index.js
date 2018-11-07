@@ -2,6 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { SEARCH, SORTBY, APP_LOAD } from "../../constants/actionTypes";
 
+import "../../styles/variables.css";
+import "../../styles/styles.css";
+import "../../styles/nav.css";
+import "../../styles/table.css";
+import "../../styles/responsive.css";
+
 const mapStateToProps = state => ({
 	...state.common
 });
@@ -116,7 +122,7 @@ class Home extends React.Component {
 		}
 
 		return (
-			<div>
+			<React.Fragment>
 				<nav>
 					<p>Peerlyst</p>
 				</nav>
@@ -149,7 +155,7 @@ class Home extends React.Component {
 								</select>
 							</div>
 						</div>
-						<div className="feed-section">
+						<div className="feed-boxes">
 							<p className="subtitle title">Feeds</p>
 							<div className="feeds">{cardLayout}</div>
 						</div>
@@ -190,7 +196,7 @@ class Home extends React.Component {
 						</div>
 					</div>
 				</section>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

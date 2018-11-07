@@ -1,0 +1,47 @@
+.table-div {
+	margin: 12px;
+	overflow-x: scroll;
+}
+
+.table-container {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.table-container td,
+.table-container th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.table-container tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.table-container th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: var(--main-bg-color);
+	color: white;
+}
+
+.table-container .table-name {
+	min-width: 200px;
+}
+
+.table-container .table-date {
+	min-width: 100px;
+}
+
+.table-container .table-image {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+}
+
+.table-container .table-image img {
+	width: 100%;
+	height: 100%;
+}

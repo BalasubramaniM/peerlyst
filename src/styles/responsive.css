@@ -1,0 +1,98 @@
+/* 
+  ##Device = iMac etc.,
+  ##Screen = 1472px and above.
+*/
+
+@media (min-width: 1357px) {
+	/* For desktop: */
+	.container {
+		max-width: 1344px;
+		width: 1344px;
+	}
+	.container .select-boxes div:last-child {
+		text-align: right;
+	}
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1356px) {
+	.feeds .feed {
+		flex: 1 0 45%;
+		height: 450px;
+	}
+	.container .select-boxes div:last-child {
+		text-align: right;
+	}
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.feeds .feed {
+		flex: 1 0 97%;
+	}
+	.container .select-boxes {
+		flex-direction: column;
+	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 1.5rem;
+	}
+	.container .select-boxes div:last-child {
+		text-align: left;
+	}
+	.input,
+	select {
+		max-width: 100%;
+	}
+
+	.table-container .table-name {
+		min-width: 100px;
+	}
+
+	.table-container .table-image {
+		width: 100px;
+		height: 100px;
+		box-sizing: border-box;
+	}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.feeds .feed {
+		flex: 1 0 93%;
+		height: 460px;
+	}
+	.container .select-boxes {
+		flex-direction: column;
+	}
+	.container .select-boxes div:first-child {
+		margin-bottom: 1.5rem;
+	}
+	.container .select-boxes div:last-child {
+		text-align: left;
+	}
+	.input,
+	select {
+		max-width: 100%;
+	}
+	.table-container .table-name {
+		min-width: 100px;
+	}
+
+	.table-container .table-image {
+		width: 100px;
+		height: 100px;
+		box-sizing: border-box;
+	}
+}

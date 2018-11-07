@@ -4,7 +4,6 @@ import Home from "../components/Home";
 import { store } from "../store";
 import renderer from "react-test-renderer";
 import jsonData from "../data/mock_data.json";
-import configureStore from "redux-mock-store";
 
 describe("App", () => {
 	it("Should render component", () => {

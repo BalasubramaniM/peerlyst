@@ -1,0 +1,9 @@
+/*
+Variable declarations
+ */
+:root {
+	--main-bg-color: #008080;
+	--secondary-bg-color: #ddeae8;
+	--main-text-color: #4a4a4a;
+	--secondary-text-color: #505050;
+}
