@@ -82,26 +82,14 @@ select {
 
 .feeds {
 	margin-top: 1.5rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.feeds::after {
-	content: "";
-	flex: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .feeds .feed {
-	flex: 0 0 31.5%;
 	margin: 12px;
 	height: 430px;
 	min-width: 0;
-}
-
-.feeds .feed:last-child {
-	margin-right: 0px;
 }
 
 .card {

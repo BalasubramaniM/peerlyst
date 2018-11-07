@@ -20,8 +20,10 @@
 */
 
 @media (min-width: 768px) and (max-width: 1356px) {
+	.feeds {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	.feeds .feed {
-		flex: 1 0 45%;
 		height: 450px;
 	}
 	.container .select-boxes div:last-child {
@@ -35,8 +37,8 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-	.feeds .feed {
-		flex: 1 0 97%;
+	.feeds {
+		grid-template-columns: repeat(1, 1fr);
 	}
 	.container .select-boxes {
 		flex-direction: column;
@@ -69,8 +71,10 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+	.feeds {
+		grid-template-columns: repeat(1, 1fr);
+	}
 	.feeds .feed {
-		flex: 1 0 93%;
 		height: 460px;
 	}
 	.container .select-boxes {
