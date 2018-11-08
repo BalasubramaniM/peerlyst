@@ -4,7 +4,7 @@ const defaultState = {
     appName: "Peerlyst",
     appLoaded: false,
     search: "",
-    sortby: ""
+    sortby: "title"
 };
 
 export default (state = defaultState, action) => {

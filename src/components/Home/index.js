@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import { store } from "../../store";
+import { push } from "react-router-redux";
 import { SEARCH, SORTBY, APP_LOAD } from "../../constants/actionTypes";
+import querySearch from "stringquery";
 
 import "../../styles/variables.css";
 import "../../styles/styles.css";
@@ -15,7 +18,12 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
 	onChangeSearch: value => dispatch({ type: SEARCH, value }),
 	onSortBy: value => dispatch({ type: SORTBY, value }),
-	onLoad: () => dispatch({ type: APP_LOAD })
+	onLoad: query =>
+		dispatch({
+			type: APP_LOAD,
+			SEARCH: query.search ? query.search.replace(/%20/g, " ") : "",
+			SORTBY: query.sortby ? query.sortby : "title"
+		})
 });
 
 const CardLayout = props => {
@@ -47,11 +55,16 @@ class Home extends React.Component {
 		this.onSelect = this.onSelect.bind(this);
 		this.onSearch = this.onSearch.bind(this);
 		this.onChangeInput = this.onChangeInput.bind(this);
+		this.onEnter = this.onEnter.bind(this);
 	}
 
-	// Get props once component is loaded.
+	/**
+	 * Get props once component is loaded.
+	 * Get Search query params from URL and update component.
+	 */
 	componentDidMount() {
-		this.props.onLoad();
+		let query = querySearch(window.location.search);
+		this.props.onLoad(query);
 	}
 
 	// Format date to readable format.
@@ -61,6 +74,14 @@ class Home extends React.Component {
 	}
 
 	onSelect(event) {
+		// Updating URL Search param on Select (SORT_BY)
+		store.dispatch(
+			push({
+				search: `search=${this.props.search}&sortby=${
+					event.target.value
+				}`
+			})
+		);
 		this.props.onSortBy(event.target.value);
 	}
 
@@ -70,6 +91,22 @@ class Home extends React.Component {
 
 	onChangeInput(event) {
 		this.props.onChangeSearch(event.target.value);
+	}
+
+	/**
+	 * Updating URL Search param only on Enter.
+	 * @param  {Object} event [Event]
+	 */
+	onEnter(event) {
+		if (event.key === "Enter") {
+			store.dispatch(
+				push({
+					search: `search=${this.props.search}&sortby=${
+						this.props.sortby
+					}`
+				})
+			);
+		}
 	}
 
 	render() {
@@ -139,6 +176,7 @@ class Home extends React.Component {
 									placeholder="Search ..."
 									onKeyUp={this.onSearch}
 									value={this.props.search}
+									onKeyPress={this.onEnter}
 									onChange={this.onChangeInput}
 								/>
 							</div>

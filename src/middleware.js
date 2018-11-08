@@ -6,6 +6,22 @@ import { SEARCH, SORTBY } from "./constants/actionTypes";
  */
 const localStorageMiddleware = store => next => action => {
     if (action.type === SORTBY || action.type === SEARCH) {
+        if (action.type === SORTBY) {
+            action[SORTBY] = action.value;
+        }
+        if (action.type === SEARCH) {
+            action[SEARCH] = action.value;
+        }
+    }
+
+    next(action);
+};
+
+export { localStorageMiddleware };
+
+/**
+ * const localStorageMiddleware = store => next => action => {
+    if (action.type === SORTBY || action.type === SEARCH) {
         window.localStorage.setItem(action.type, action.value);
 
         if (action.type === SORTBY) {
@@ -35,5 +51,4 @@ const localStorageMiddleware = store => next => action => {
 
     next(action);
 };
-
-export { localStorageMiddleware };
+ */

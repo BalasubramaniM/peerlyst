@@ -16,6 +16,7 @@ Peerlyst Challenge. This application was built using [create-react-app](https://
 - [react-scripts](https://www.npmjs.com/package/react-scripts)
 - [redux](https://www.npmjs.com/package/redux)
 - [redux-logger](https://www.npmjs.com/package/redux-logger)
+- [stringquery](https://www.npmjs.com/package/stringquery)
 
 #### Dev Dependencies
 

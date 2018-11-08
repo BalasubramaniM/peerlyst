@@ -23,6 +23,7 @@ Array [
                 <input
                     className="input search"
                     onChange={[Function]}
+                    onKeyPress={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Search ..."
                     type="text"
@@ -3192,125 +3193,125 @@ Array [
                         <td
                             className="table-name"
                         >
-                            Regional Marketing Developer
+                            Central Creative Producer
                         </td>
                         <td>
                             <div
                                 className="table-image"
                             >
                                 <img
-                                    alt="Regional Marketing Developer"
+                                    alt="Central Creative Producer"
                                     src="http://lorempixel.com/640/480"
                                 />
                             </div>
                         </td>
                         <td>
-                            Consequatur enim quo. Vitae non autem quas. Omnis accusantium suscipit consequatur eaque ut voluptatibus est. Qui non atque quasi. Ut rerum aut totam temporibus. Beatae aliquam voluptatem dolorum nobis quia omnis deleniti esse voluptas.
+                            Et qui rerum voluptatibus molestias. Eos id incidunt adipisci eum ratione dolores deleniti consectetur rem. Pariatur soluta inventore est facere maiores.
                         </td>
                         <td
                             className="table-date"
                         >
-                            2018-10-05
+                            2018-07-17
                         </td>
                     </tr>
                     <tr>
                         <td
                             className="table-name"
                         >
-                            District Solutions Orchestrator
+                            Central Implementation Coordinator
                         </td>
                         <td>
                             <div
                                 className="table-image"
                             >
                                 <img
-                                    alt="District Solutions Orchestrator"
+                                    alt="Central Implementation Coordinator"
                                     src="http://lorempixel.com/640/480"
                                 />
                             </div>
                         </td>
                         <td>
-                            Laboriosam occaecati modi sit voluptatem. Quis harum rerum similique at. Animi porro doloremque expedita occaecati. Et porro eum quia eligendi doloribus aut. Tenetur provident maxime quod illum vitae excepturi. Nemo ipsum non.
+                            Aut et voluptatum laudantium labore et. Molestiae modi esse qui. Ex quidem animi. Dolore consequatur ut occaecati rem id rem est quia quidem. Sit in delectus et vero. Sed quibusdam asperiores ut.
                         </td>
                         <td
                             className="table-date"
                         >
-                            2018-10-03
+                            2018-04-25
                         </td>
                     </tr>
                     <tr>
                         <td
                             className="table-name"
                         >
-                            Internal Assurance Manager
+                            Central Research Strategist
                         </td>
                         <td>
                             <div
                                 className="table-image"
                             >
                                 <img
-                                    alt="Internal Assurance Manager"
+                                    alt="Central Research Strategist"
                                     src="http://lorempixel.com/640/480"
                                 />
                             </div>
                         </td>
                         <td>
-                            Excepturi distinctio tempora numquam praesentium necessitatibus ipsum. Molestiae amet saepe odio vero et laboriosam ipsum. Doloremque distinctio molestiae optio.
+                            Sed eaque et et atque sit. Vel dolorem cupiditate ducimus. Ea iste aut omnis est reiciendis aliquid eos. Explicabo quae rerum dolorum nostrum aut. Dolores at quidem ipsam rerum quis vitae veniam est voluptatibus. Odio veniam expedita laborum voluptatum vero repellat consectetur.
                         </td>
                         <td
                             className="table-date"
                         >
-                            2018-09-26
+                            2017-11-19
                         </td>
                     </tr>
                     <tr>
                         <td
                             className="table-name"
                         >
-                            Corporate Response Developer
+                            Chief Brand Orchestrator
                         </td>
                         <td>
                             <div
                                 className="table-image"
                             >
                                 <img
-                                    alt="Corporate Response Developer"
+                                    alt="Chief Brand Orchestrator"
                                     src="http://lorempixel.com/640/480"
                                 />
                             </div>
                         </td>
                         <td>
-                            Libero saepe distinctio ut voluptas voluptas nostrum facere. Sit et possimus assumenda ut non dolore. Odit vel quo non ab nemo.
+                            Doloremque consequatur expedita excepturi dolores debitis. Aperiam illum dolorum officia officia consequatur sint reiciendis. Ut veniam eos nam vel. Beatae sit qui tenetur. Fugit illum cum. Vitae cupiditate maiores aut pariatur corporis.
                         </td>
                         <td
                             className="table-date"
                         >
-                            2018-09-25
+                            2017-10-15
                         </td>
                     </tr>
                     <tr>
                         <td
                             className="table-name"
                         >
-                            Regional Intranet Developer
+                            Chief Identity Technician
                         </td>
                         <td>
                             <div
                                 className="table-image"
                             >
                                 <img
-                                    alt="Regional Intranet Developer"
+                                    alt="Chief Identity Technician"
                                     src="http://lorempixel.com/640/480"
                                 />
                             </div>
                         </td>
                         <td>
-                            Corrupti voluptates sint esse voluptatem sed hic sint. Esse ad optio. Eius et mollitia rem voluptatum.
+                            Ipsum quis blanditiis enim. Ut ut nisi laborum impedit veritatis. Quia pariatur laboriosam iure esse est necessitatibus velit. Voluptates et nam occaecati eius ut repudiandae saepe quo. Non velit delectus voluptatem sint fugit facilis.
                         </td>
                         <td
                             className="table-date"
                         >
-                            2018-09-21
+                            2018-05-30
                         </td>
                     </tr>
                 </tbody>
