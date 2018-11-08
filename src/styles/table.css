@@ -16,7 +16,7 @@
 }
 
 .table-container tr:nth-child(even) {
-	background-color: #f2f2f2;
+	background-color: #f8f8f8;
 }
 
 .table-container th {
